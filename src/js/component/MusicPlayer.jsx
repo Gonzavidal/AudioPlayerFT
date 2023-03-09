@@ -51,9 +51,9 @@ const MusicPlayer = () => {
     }
 
     function previousSong() {
-        if(playing === null || playing === playingSong.length - 1){
+        if(playing === null || playing === 0){
             playingSongRef.src ="https://assets.breatheco.de/apis/sound/songs" + playingSong[playing.length - 1].url;
-            setPlaying(playing.length - 1)
+            setPlaying(playingSong.length - 1)
             playSong();
             return;
         } else {
