@@ -1,8 +1,6 @@
-
-.reproductor {
+.container {
     height: 500px;
     width: 400px;
-    padding: 0 0.5rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
