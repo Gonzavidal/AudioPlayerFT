@@ -34,7 +34,7 @@ button {
     border-radius: 50px;
     background-color: transparent;
     border: none;
-    color: green;
+    color:  black;
     font-size: 30px;
 }
 
@@ -42,7 +42,7 @@ button {
     border-radius: 50px;
     background-color: transparent;
     border: none;
-    color: green;
+    color:  black;
     font-size: 50px;
 }
 
@@ -50,6 +50,10 @@ button {
     border-radius: 50px;
     background-color: transparent;
     border: none;
-    color: green;
+    color:  black;
     font-size: 30px;
+}
+
+#app {
+    margin-top: 50px;
 }
