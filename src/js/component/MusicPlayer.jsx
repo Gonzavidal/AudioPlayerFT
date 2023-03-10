@@ -19,7 +19,8 @@ const MusicPlayer = () => {
         const url = track.url
         return (
         <li key={i}>
-            <button className={styles.lista} onClick={() => {playingSongRef.src ="https://assets.breatheco.de/apis/sound/songs" + url; setPlaying(i)}}>
+            <button onClick={() => {playingSongRef.src ="https://assets.breatheco.de/apis/sound/" + url; setPlaying(i)}}>
+                {track.name}
            </button>
         </li>)
 
@@ -39,27 +40,27 @@ const MusicPlayer = () => {
 
     function nextSong() {
         if(playing === null || playing === playingSong.length - 1){
-            playingSongRef.src ="https://assets.breatheco.de/apis/sound/songs" + playingSong[0].url;
+            playingSongRef.src ="https://assets.breatheco.de/apis/sound/" + playingSong[0].url;
             setPlaying(0)
             playSong();
             return;
         } else {
-            playingSongRef.src ="https://assets.breatheco.de/apis/sound/songs" + playingSong[playing + 1].url;
-            setPlaying()
-            playSong(playing + 1);
+            playingSongRef.src ="https://assets.breatheco.de/apis/sound/" + playingSong[playing + 1].url;
+            playSong();
+            setPlaying(playing + 1)
         }
     }
 
     function previousSong() {
         if(playing === null || playing === 0){
-            playingSongRef.src ="https://assets.breatheco.de/apis/sound/songs" + playingSong[playing.length - 1].url;
+            playingSongRef.src ="https://assets.breatheco.de/apis/sound/" + playingSong[playingSong.length - 1].url;
             setPlaying(playingSong.length - 1)
             playSong();
             return;
         } else {
-            playingSongRef.src ="https://assets.breatheco.de/apis/sound/songs" + playingSong[playing - 1].url;
-            setPlaying()
-            playSong(playing - 1);
+            playingSongRef.src ="https://assets.breatheco.de/apis/sound/" + playingSong[playing - 1].url;
+            playSong();
+            setPlaying(playing - 1);
         }
     }
 
